@@ -1,126 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Builder</title>
-    <link href="output.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shareable Resume</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        .fade-in {
-            animation: fadeIn 0.5s ease-in;
+        .resume-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .resume-email {
+            font-size: 1.2rem;
+            color: #555;
+        }
+        .profile-image {
+            width: 80px; 
+            height: 80px; 
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <div class="max-w-3xl mx-auto w-full p-6 bg-white rounded-lg shadow-lg">
-        <h1 class="text-4xl font-bold text-blue-600 mb-6 text-center">Resume Builder</h1>
-        <form id="resumeForm" class="space-y-6">
-            <div>
-                <label for="name" class="block text-lg font-medium">Name:</label>
-                <input type="text" id="name" class="border border-gray-300 rounded-lg w-full p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-            </div>
-            <div>
-                <label for="email" class="block text-lg font-medium">Email:</label>
-                <input type="email" id="email" class="border border-gray-300 rounded-lg w-full p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-            </div>
-            <div>
-                <label for="contact" class="block text-lg font-medium">Contact Number:</label>
-                <input type="tel" id="contact" placeholder="e.g., +1234567890" class="border border-gray-300 rounded-lg w-full p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-            </div>
-            <div>
-                <label for="address" class="block text-lg font-medium">Address:</label>
-                <input type="text" id="address" class="border border-gray-300 rounded-lg w-full p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-            </div>
-            <div>
-                <label class="block text-lg font-medium">Profile Image:</label>
-                <input type="file" id="profileImage" class="border border-gray-300 rounded-lg w-full p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" accept="image/*">
-            </div>
+<body class="bg-gray-50">
+    <div class="container mx-auto p-6 md:p-10 lg:p-12">
+        <h1 class="text-5xl font-bold mb-8 text-center text-gray-900">Shareable Resume Builder</h1>
+        <form id="resume-form" class="bg-white p-10 rounded-xl shadow-lg space-y-8">
+            <fieldset class="mb-8">
+                <legend class="text-3xl font-semibold mb-6 text-gray-800">Personal Information</legend>
+                <label for="name" class="block mb-2 text-lg font-medium text-gray-700">Name:</label>
+                <input type="text" id="name" class="border border-gray-300 rounded-lg p-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+                
+                <label for="email" class="block mb-2 text-lg font-medium text-gray-700">Email:</label>
+                <input type="email" id="email" class="border border-gray-300 rounded-lg p-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+                
+                <label for="profileImg" class="block mb-2 text-lg font-medium text-gray-700">Profile Image:</label>
+                <input type="file" id="profileImg" accept="image/*" class="border border-gray-300 rounded-lg p-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+            </fieldset>
 
-            <div>
-                <label class="block text-lg font-medium">Education:</label>
-                <div id="educationContainer" class="space-y-2">
-                    <div class="educationEntry">
-                        <input type="text" placeholder="Degree" class="border border-gray-300 rounded-lg w-full p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                        <input type="text" placeholder="School/University" class="border border-gray-300 rounded-lg w-full p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                        <input type="date" class="border border-gray-300 rounded-lg w-full p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            <fieldset class="mb-8">
+                <legend class="text-3xl font-semibold mb-6 text-gray-800">Education</legend>
+                <div id="education-container">
+                    <div class="education-entry mb-6">
+                        <label class="block mb-2 text-lg font-medium text-gray-700">Degree:</label>
+                        <input type="text" class="degree border border-gray-300 rounded-lg p-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+                        
+                        <label class="block mb-2 text-lg font-medium text-gray-700">School/University:</label>
+                        <input type="text" class="school border border-gray-300 rounded-lg p-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+                        
+                        <label class="block mb-2 text-lg font-medium text-gray-700">Graduation Year:</label>
+                        <input type="date" class="gradYear border border-gray-300 rounded-lg p-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" required />
                     </div>
                 </div>
-                <button type="button" id="addEducation" class="mt-2 text-blue-600 hover:text-blue-800 font-semibold">+ Add another education</button>
-            </div>
+                <button type="button" id="add-education-btn" class="bg-blue-600 text-white rounded-lg p-4 hover:bg-blue-700 transition duration-200">+ Add Education</button>
+            </fieldset>
 
-            <div>
-                <label class="block text-lg font-medium">Certifications:</label>
-                <div id="certificationContainer" class="space-y-2">
-                    <input type="text" placeholder="Certification" class="border border-gray-300 rounded-lg w-full p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                </div>
-                <button type="button" id="addCertification" class="mt-2 text-blue-600 hover:text-blue-800 font-semibold">+ Add another certification</button>
-            </div>
-
-            <div>
-                <label class="block text-lg font-medium">Work Experience:</label>
-                <div id="experienceContainer" class="space-y-2">
-                    <div class="experienceEntry">
-                        <input type="text" placeholder="Job Title" class="border border-gray-300 rounded-lg w-full p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                        <input type="text" placeholder="Company Name" class="border border-gray-300 rounded-lg w-full p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                        <input type="date" placeholder="Date of Employment" class="border border-gray-300 rounded-lg w-full p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            <fieldset class="mb-8">
+                <legend class="text-3xl font-semibold mb-6 text-gray-800">Work Experience</legend>
+                <div id="work-container">
+                    <div class="work-entry mb-6">
+                        <label class="block mb-2 text-lg font-medium text-gray-700">Job Title:</label>
+                        <input type="text" class="jobTitle border border-gray-300 rounded-lg p-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+                        
+                        <label class="block mb-2 text-lg font-medium text-gray-700">Company:</label>
+                        <input type="text" class="company border border-gray-300 rounded-lg p-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+                        
+                        <label class="block mb-2 text-lg font-medium text-gray-700">Years of Experience:</label>
+                        <input type="date" class="years border border-gray-300 rounded-lg p-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" required />
                     </div>
                 </div>
-                <button type="button" id="addExperience" class="mt-2 text-blue-600 hover:text-blue-800 font-semibold">+ Add another experience</button>
-            </div>
+                <button type="button" id="add-work-btn" class="bg-blue-600 text-white rounded-lg p-4 hover:bg-blue-700 transition duration-200">+ Add Experience</button>
+            </fieldset>
 
-            <div>
-                <label class="block text-lg font-medium">Skills:</label>
-                <div id="skillsContainer" class="space-y-2">
-                    <input type="text" placeholder="Skill" class="border border-gray-300 rounded-lg w-full p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                </div>
-                <button type="button" id="addSkill" class="mt-2 text-blue-600 hover:text-blue-800 font-semibold">+ Add another skill</button>
-            </div>
+            <fieldset class="mb-8">
+                <legend class="text-3xl font-semibold mb-6 text-gray-800">Skills</legend>
+                <label for="skills" class="block mb-2 text-lg font-medium text-gray-700">Skills (comma separated):</label>
+                <input type="text" id="skills" class="border border-gray-300 rounded-lg p-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+            </fieldset>
 
-            <div>
-                <label class="block text-lg font-medium">Languages:</label>
-                <div id="languagesContainer" class="space-y-2">
-                    <input type="text" placeholder="Language" class="border border-gray-300 rounded-lg w-full p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                </div>
-                <button type="button" id="addLanguage" class="mt-2 text-blue-600 hover:text-blue-800 font-semibold">+ Add another language</button>
-            </div>
-
-            <button type="button" id="generate" class="bg-blue-600 text-white p-3 rounded-lg w-full hover:bg-blue-700 transition">Generate PDF</button>
+            <button type="submit" class="bg-green-600 text-white rounded-lg p-4 hover:bg-green-700 transition duration-200 w-full">Generate Resume</button>
         </form>
-    </div>
 
-    <div class="max-w-3xl  mx-auto w-full p-8 bg-white shadow-lg rounded-lg mt-6">
-        <div id="resume" class="hidden fade-in p-6">
-            <img id="resumeImage" class="w-24 h-24 rounded-full mb-4" alt="Profile Image" style="display: none;">
-            <p class="text-gray-700 text-lg"><strong>Name:</strong> <span id="resumeName"></span></p>
-            <p class="text-gray-700 text-lg"><strong>Email:</strong> <span id="resumeEmail"></span></p>
-            <p class="text-gray-700 text-lg"><strong>Contact Number:</strong> <span id="resumeContact"></span></p>
-            <p class="text-gray-700 text-lg"><strong>Address:</strong> <span id="resumeAddress"></span></p>
-    
-            <h3 class="font-semibold text-blue-600 mt-4 text-xl">Education</h3>
-            <div id="resumeEducation" class="text-gray-700 text-lg"></div>
-    
-            <h3 class="font-semibold text-blue-600 mt-4 text-xl">Certifications</h3>
-            <div id="resumeCertifications" class="text-gray-700 text-lg"></div>
-    
-            <h3 class="font-semibold text-blue-600 mt-4 text-xl">Work Experience</h3>
-            <div id="resumeExperience" class="text-gray-700 text-lg"></div>
-    
-            <h3 class="font-semibold text-blue-600 mt-4 text-xl">Skills</h3>
-            <p id="resumeSkills" class="text-gray-700 text-lg"></p>
-    
-            <h3 class="font-semibold text-blue-600 mt-4 text-xl">Languages</h3>
-            <p id="resumeLanguages" class="text-gray-700 text-lg"></p>
+        <hr class="my-8 border-gray-300" />
+
+        <div id="resume" class="bg-white p-8 rounded-lg shadow-lg mb-6">
+            <div id="resume-content"></div>
+        </div>
+
+        <div id="share-section" class="flex flex-col items-center">
+            <button id="copy-link-btn" class="bg-yellow-500 text-white rounded-lg p-4 hover:bg-yellow-600 transition duration-200 mb-2">Copy Shareable Link</button>
+            <a id="shareable-link" href="#" target="_blank" class="text-blue-600 hover:underline mb-2 hidden">View Shareable Resume</a>
+            <button id="download-btn" class="bg-purple-600 text-white rounded-lg p-4 hover:bg-purple-700 transition duration-200">Download PDF</button>
         </div>
     </div>
-    
-    <script src="resume.js" type="module"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="resume.js" defer></script>
 </body>
 </html>
-
-
-
