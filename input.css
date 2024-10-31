@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -28,3 +29,13 @@ h3 {
 h4 {
     color: #2563eb; /* Blue-500 */
 }
+=======
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html{
+    scroll-behavior: smooth;
+}
+>>>>>>> 4955e0b67d540ddce14b6cad34e44ec4fda18bcb

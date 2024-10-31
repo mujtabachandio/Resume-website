@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .hidden {
     opacity: 0;
     pointer-events: none;
@@ -7,4 +8,15 @@
     opacity: 1;
     pointer-events: auto;
   }
+=======
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+>>>>>>> 4955e0b67d540ddce14b6cad34e44ec4fda18bcb
   
