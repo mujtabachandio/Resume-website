@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    color: #1d4ed8; /* Blue-600 */
+}
+
+h2 {
+    color: #3b82f6; /* Blue-500 */
+}
+
+h3 {
+    color: #1d4ed8; /* Blue-600 */
+}
+
+h4 {
+    color: #2563eb; /* Blue-500 */
+}
