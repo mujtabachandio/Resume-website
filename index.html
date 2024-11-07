@@ -1,493 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon"
-        href="./images/png-clipart-cv-library-employment-website-curriculum-vitae-recruitment-job-others-miscellaneous-blue.png"
-        type="image/x-icon">
-    <link href="./output.css" rel="stylesheet">
-    <link rel="stylesheet" href="scroll.css">
-    <title>CV.</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ResumeForge</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
 </head>
+<body>
+  <nav class="navbar">
+    <div class="logo">ResumeForge</div>
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="#About">About</a>
+        <a href="#Services">Services</a>
+        <a href="#Pricing">Pricing</a>
+        <a href="#Contact">Contact</a>
+    </div>
+    <button class="mobile-menu">☰</button>
+  </nav>
 
-<body >
+  <section class="hero" id="Home">
+      <div class="hero-content">
+          <h1>Create Your Perfect Resume in Minutes</h1>
+          <p>Join over 1 million professionals who've landed their dream jobs using ResumeForge's AI-powered resume builder.</p>
+          <a href="resume.html" class="cta-button">Start Building Free</a>
 
-    <header class='flex shadow-lg py-4 px-4 sm:px-10 bg-gray-900 font-[sans-serif] min-h-[70px] tracking-wide z-50'>
-        <div class='flex flex-wrap items-center justify-between gap-5 w-full'>
-          <a href="/">
-            <img src="/images/png-clipart-cv-library-employment-website-curriculum-vitae-recruitment-job-others-miscellaneous-blue.png" alt="logo" class='w-20 rounded-full' />
-          </a>
-      
-          <div id="collapseMenu" class='max-lg:hidden lg:block'>
-            <button id="toggleClose" class='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white p-3'>
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 fill-black" viewBox="0 0 320.591 320.591">
-                <path d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"></path>
-                <path d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"></path>
-              </svg>
-            </button>
-      
-            <ul class='lg:flex gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
-              <li class='mb-6 hidden max-lg:block'>
-                <a href="/"><img src="/images/png-clipart-cv-library-employment-website-curriculum-vitae-recruitment-job-others-miscellaneous-blue.png" alt="logo" class='w-28' /></a>
-              </li>
-              <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'>
-                <a href='/' class='duration-300 hover:text-[#007bff] text-[#007bff] block font-semibold text-[15px]'>Home</a>
-              </li>
-              <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'>
-                <a href='#About' class='duration-300 hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]'>About</a>
-              </li>
-              <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'>
-                <a href='#Features' class='duration-300 hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]'>Features</a>
-              </li>
-              <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'>
-                <a href='#Trusted Partners' class='duration-300 hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]'>Trusted Partners</a>
-              </li>
-              <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'>
-                <a href='#FAQ' class='duration-300 hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]'>FAQ</a>
-              </li>
-              <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'>
-                <a href='#Contact' class='duration-300 hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]'>Contact</a>
-              </li>
-            </ul>
+          <div class="stats">
+              <div class="stat-card">
+                  <h3>1M+</h3>
+                  <p>Users</p>
+              </div>
+              <div class="stat-card">
+                  <h3>92%</h3>
+                  <p>Success Rate</p>
+              </div>
+              <div class="stat-card">
+                  <h3>150+</h3>
+                  <p>Templates</p>
+              </div>
+              <div class="stat-card">
+                  <h3>4.9/5</h3>
+                  <p>User Rating</p>
+              </div>
           </div>
-      
-          <div class='flex max-lg:ml-auto space-x-3'>
-            <button class='px-4 py-2 text-sm rounded-full font-bold text-white border-2 border-[#007bff] bg-[#007bff] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#007bff]'>Login</button>
-            <button class='px-4 py-2 text-sm rounded-full font-bold text-white border-2 border-[#007bff] bg-[#007bff] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#007bff]'>Sign up</button>
-      
-            <button id="toggleOpen" class='lg:hidden'>
-              <svg class="w-7 h-7" fill="#fff" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-              </svg>
-            </button>
-          </div>
+      </div>
+  </section>
+  <!-- about section -->
+  <section class="about-us" id="About">
+    <div class="about">
+      <img src="images/about.webp" class="pic" />
+      <div class="text">
+        <h2>About Us</h2>
+        <h5>Online Resume <span>Designer</span></h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita natus ad sed harum itaque ullam enim quas, veniam accusantium, quia animi id eos adipisci iusto molestias asperiores explicabo cum vero atque amet corporis! Soluta illum facere consequuntur magni. Ullam dolorem repudiandae cumque voluptate consequatur consectetur, eos provident necessitatibus reiciendis corrupti!</p>
+        <div class="data">
+          <a href="#" class="hire">Hire us</a>
         </div>
-      </header>
-      
-      
-                                <button id="scrollToTopBtn" 
-                                class="hidden fixed bottom-5 right-5 bg-[#007bff] text-white font-extrabold p-3 rounded-full shadow-lg 
-                                      transition-opacity duration-300 z-50">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="white" class="w-8 h-8" viewBox="0 0 24 24">
-                                <path d="M12 4l-8 8h6v8h4v-8h6l-8-8z"/>
-                                </svg>
-                                
-                                </button>
-
-
-<!--Main Section -->
-<main class="flex items-center justify-center min-h-screen bg-gray-100 p-4">
-    <section class="flex flex-col lg:flex-row w-full max-w-screen-xl p-8 bg-white rounded-lg shadow-lg">
-      <div class="w-full lg:w-1/2 mb-8 lg:mb-0 lg:pr-8 flex flex-col justify-center">
-        <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-indigo-600 mb-4">
-          Elevate Your Career with a Professional CV
-        </h1>
-        <p class="text-gray-700 text-base md:text-lg mb-8">
-          Crafting a compelling curriculum vitae is essential for showcasing your talents and achievements. Whether you're entering the job market or seeking new opportunities, your CV is your first impression. Let's work together to create a document that truly reflects your unique skills and experiences.
-        </p>
-        <button 
-  id="navigateButton" 
-  class="relative flex items-center px-4 py-2 overflow-hidden font-medium transition-all bg-indigo-900 rounded-md group max-w-max">
-  <span class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-mr-4 group-hover:-mt-4">
-    <span class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
-  </span>
-  <span class="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-ml-4 group-hover:-mb-4">
-    <span class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
-  </span>
-  <span class="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-indigo-600 rounded-md group-hover:translate-x-0"></span>
-  <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">
-    Get Started
-  </span>
-</button>
-
       </div>
-      
-      <div class="w-full lg:w-1/2">
-        <img src="./images/des.svg" alt="Your Image" class="w-full h-auto rounded-lg shadow-md">
+    </div>
+  </section>
+
+  <!-- services section -->
+  <section id="Services">
+    <div class="row">
+      <h2 class="section-heading">Our Services</h2>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <div class="icon-wrapper">
+            <i class="fas fa-hammer"></i>
+          </div>
+          <h3>Service Heading</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+            consequatur necessitatibus eaque.
+          </p>
+        </div>
       </div>
-    </section>
-  </main>
+      <div class="column">
+        <div class="card">
+          <div class="icon-wrapper">
+            <i class="fas fa-brush"></i>
+          </div>
+          <h3>Service Heading</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+            consequatur necessitatibus eaque.
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="icon-wrapper">
+            <i class="fas fa-wrench"></i>
+          </div>
+          <h3>Service Heading</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+            consequatur necessitatibus eaque.
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="icon-wrapper">
+            <i class="fas fa-truck-pickup"></i>
+          </div>
+          <h3>Service Heading</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+            consequatur necessitatibus eaque.
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="icon-wrapper">
+            <i class="fas fa-broom"></i>
+          </div>
+          <h3>Service Heading</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+            consequatur necessitatibus eaque.
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="icon-wrapper">
+            <i class="fas fa-plug"></i>
+          </div>
+          <h3>Service Heading</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+            consequatur necessitatibus eaque.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- trusted section -->
+  <section class="trusted-partners" id="Trusted Partners">
+    <h2 class="section-heading">
+      Trusted by 6M+ professionals from companies across the world
+    </h2>
   
-
-<section class="px-6 mb-32 bg-white" id="About">
-  <div class="bg-black">
-
-    <section id="features"
-        class="relative block px-6 py-10 md:py-20 md:px-10  border-t border-b border-neutral-900 bg-neutral-900/30">
-
-
-        <div class="relative mx-auto max-w-5xl text-center">
-            <span class="text-gray-400 my-3 flex items-center justify-center font-medium uppercase tracking-wider">
-            Why choose us
-            </span>
-            <h2
-                class="block w-full bg-gradient-to-b from-white to-gray-400 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl">
-                Build a Website That Your Customers Love
-            </h2>
-            <p
-                class="mx-auto my-4 w-full max-w-xl bg-transparent text-center font-medium leading-relaxed tracking-wide text-gray-400">
-                Our templates allow for maximum customization. No technical skills required – our intuitive design tools
-                let
-                you get the job done easily.
-            </p>
-        </div>
-
-
-        <div class="relative mx-auto max-w-7xl z-10 grid grid-cols-1 gap-10 pt-14 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="rounded-md border border-neutral-800 bg-neutral-900/50 p-8 text-center shadow">
-                <div class="button-text mx-auto flex h-12 w-12 items-center justify-center rounded-md border "
-                    style="background-image: linear-gradient(rgb(80, 70, 229) 0%, rgb(43, 49, 203) 100%); border-color: rgb(93, 79, 240);">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-color-swatch" width="24"
-                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M19 3h-4a2 2 0 0 0 -2 2v12a4 4 0 0 0 8 0v-12a2 2 0 0 0 -2 -2"></path>
-                        <path d="M13 7.35l-2 -2a2 2 0 0 0 -2.828 0l-2.828 2.828a2 2 0 0 0 0 2.828l9 9"></path>
-                        <path d="M7.3 13h-2.3a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h12"></path>
-                        <line x1="17" y1="17" x2="17" y2="17.01"></line>
-                    </svg>
-                </div>
-                <h3 class="mt-6 text-gray-400">We’re actually free
-                </h3>
-                <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-400">No gimmicks, no freemium features, no joke. Get everything you need to build a professional resume that shows off your best qualities to help you land your next job.
-                </p>
-            </div>
-
-
-            <div class="rounded-md border border-neutral-800 bg-neutral-900/50 p-8 text-center shadow">
-                <div class="button-text mx-auto flex h-12 w-12 items-center justify-center rounded-md border "
-                    style="background-image: linear-gradient(rgb(80, 70, 229) 0%, rgb(43, 49, 203) 100%); border-color: rgb(93, 79, 240);">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bolt" width="24"
-                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <polyline points="13 3 13 10 19 10 11 21 11 14 5 14 13 3"></polyline>
-                    </svg>
-                </div>
-                <h3 class="mt-6 text-gray-400">Data-driven templates
-                </h3>
-                <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-400">Rest assured that the templates you find on Resume.com are the best around. Based on data from what employers want to see in candidates, we’ve created our templates with hiring in mind.
-
-
-                </p>
-            </div>
-
-
-            <div class="rounded-md border border-neutral-800 bg-neutral-900/50 p-8 text-center shadow">
-                <div class="button-text mx-auto flex h-12 w-12 items-center justify-center rounded-md border "
-                    style="background-image: linear-gradient(rgb(80, 70, 229) 0%, rgb(43, 49, 203) 100%); border-color: rgb(93, 79, 240);">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tools" width="24"
-                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4"></path>
-                        <line x1="14.5" y1="5.5" x2="18.5" y2="9.5"></line>
-                        <polyline points="12 8 7 3 3 7 8 12"></polyline>
-                        <line x1="7" y1="8" x2="5.5" y2="9.5"></line>
-                        <polyline points="16 12 21 17 17 21 12 16"></polyline>
-                        <line x1="16" y1="17" x2="14.5" y2="18.5"></line>
-                    </svg>
-                </div>
-                <h3 class="mt-6 text-gray-400">Get seen
-                </h3>
-                <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-400">
-                  With your resume ready for top employers, easily share with millions of interested employers on Indeed, the world’s #1 job site.
-                </p>
-            </div>
-
-
-        </div>
-
-        <div class="absolute bottom-0 left-0 z-0 h-1/3 w-full border-b"
-            style="background-image: linear-gradient(to right top, rgba(79, 70, 229, 0.2) 0%, transparent 50%, transparent 100%); border-color: rgba(92, 79, 240, 0.2);">
-        </div>
-        <div class="absolute bottom-0 right-0 z-0 h-1/3 w-full"
-            style="background-image: linear-gradient(to left top, rgba(220, 38, 38, 0.2) 0%, transparent 50%, transparent 100%); border-color: rgba(92, 79, 240, 0.2);">
-        </div>
-
-    </section>
-</div>
-</section>
-
-
-
-
- 
-
-  <section class="py-12" id="Features">
-    <div class="text-center mb-8 ">
-        <h2 class="text-6xl font-bold text-black ">Build your resume with the best resume builder online</h2>
-        <p class="text-lg text-gray-600 ">The Resume.com resume builder stands out from the rest, but not only because we’re the only truly free resume builder out there. We also offer:</p>
+    <div class="logos-container">
+      <div class="logos">
+        <img src="/images/logo-bestbuy.webp" alt="Company 1" class="logo">
+        <img src="/images/logo-google.webp" alt="Company 2" class="logo">
+        <img src="/images/logo-ikea.webp" alt="Company 3" class="logo">
+        <img src="/images/logo-mcdonalds.webp" alt="Company 4" class="logo">
+        <img src="/images/logo-state-farm.webp" alt="Company 5" class="logo">
+        <img src="/images/logo-tesla.webp" alt="Company 6" class="logo">
+        <img src="/images/logo-bestbuy.webp" alt="Company 1" class="logo">
+        <img src="/images/logo-google.webp" alt="Company 2" class="logo">
+        <img src="/images/logo-ikea.webp" alt="Company 3" class="logo">
+        <img src="/images/logo-mcdonalds.webp" alt="Company 4" class="logo">
+        <img src="/images/logo-state-farm.webp" alt="Company 5" class="logo">
+        <img src="/images/logo-tesla.webp" alt="Company 6" class="logo">
+      </div>
     </div>
+  </section>
+    <!-- price section  -->
+    <section class="pricing-section" id="Pricing">
+      <div class="pack_card basic">
+        <div class="banner">
+          <span class="banner_tag">Basic</span>
+        </div>
+        <div class="pack_name">Basic Plan</div>
+        <p class="description">Perfect for individuals</p>
+        <div class="lists">
+          <div class="list">Unlimited file storage</div>
+          <div class="list">5 GB bandwidth per month</div>
+          <div class="list">Email support</div>
+        </div>
+        <div class="bottom">
+          <div class="price_container">
+            <span class="devise">$</span>
+            <span class="price">5</span>
+            <span class="date">/month</span>
+          </div>
+          <a class="btn" href="#">Choose Basic</a>
+        </div>
+      </div>
     
-    <!-- Cards Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
-        <!-- Card 1 -->
-        <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row duration-300 hover:bg-gray-700">
-            <img class="object-cover w-full rounded-t-lg h-full md:h-full md:w-48 md:rounded-none md:rounded-s-lg" src="/images/c1.webp" alt="">
-            <div class="flex flex-col justify-between p-4 leading-normal">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-black">100% Free download</h5>
-                <p class="mb-3 font-normal text-gray-900">Ability to download and print resumes in PDF and plain text formatting. Unlimited sharing over email and social media.</p>
-            </div>
-        </a>
-
-        <!-- Card 2 -->
-        <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row duration-300 hover:bg-gray-700">
-            <img class="object-cover w-full rounded-t-lg h-64 md:h-full md:w-48 md:rounded-none md:rounded-s-lg" src="/images/c2.webp" alt="">
-            <div class="flex flex-col justify-between p-4 leading-normal">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Pre-written examples, boost quality</h5>
-                <p class="mb-3 font-normal text-gray-900">Over 100+ job-tailored examples to kickstart your resume with ease and inspiration.</p>
-            </div>
-        </a>
-
-        <!-- Card 3 -->
-        <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row duration-300 hover:bg-gray-700">
-            <img class="object-cover w-full rounded-t-lg h-64 md:h-full md:w-48 md:rounded-none md:rounded-s-lg" src="/images/c3.webp" alt="">
-            <div class="flex flex-col justify-between p-4 leading-normal">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Intuitive to use</h5>
-                <p class="mb-3 font-normal text-gray-900">Easily organize and customize your resume sections with drag-and-drop simplicity.</p>
-            </div>
-        </a>
-
-        <!-- Card 4 -->
-        <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row duration-300 hover:bg-gray-700">
-            <img class="object-cover w-full rounded-t-lg h-64 md:h-full md:w-48 md:rounded-none md:rounded-s-lg" src="/images/c4.webp" alt="">
-            <div class="flex flex-col justify-between p-4 leading-normal">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Know your progress</h5>
-                <p class="mb-3 font-normal text-gray-900">Stay on track throughout the resume-building process.</p>
-            </div>
-        </a>
-
-        <!-- Card 5 -->
-        <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row duration-300 hover:bg-gray-700">
-            <img class="object-cover w-full rounded-t-lg h-64 md:h-full md:w-48 md:rounded-none md:rounded-s-lg" src="/images/c5.webp" alt="">
-            <div class="flex flex-col justify-between p-4 leading-normal">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Professional writers crafted</h5>
-                <p class="mb-3 font-normal text-gray-900">Crafted by professional writers to help you start and refine your resume.</p>
-            </div>
-        </a>
-
-        <!-- Card 6 -->
-        <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row duration-300 hover:bg-gray-700">
-            <img class="object-cover w-full rounded-t-lg h-64 md:h-full md:w-48 md:rounded-none md:rounded-s-lg" src="/images/c6.webp" alt="">
-            <div class="flex flex-col justify-between p-4 leading-normal">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Upload existing resume</h5>
-                <p class="mb-3 font-normal text-gray-900">Upload and enhance your existing resume with our advanced tools.</p>
-            </div>
-        </a>
-    </div>
-</section>
-
-<section class="bg-gray-100 py-36" id="Trusted Partners">
-  <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-16">
-    Trusted by 6M+ professionals from companies across the world
-  </h2>
-
-  <div class="overflow-hidden relative w-full">
-    <div class="flex items-center justify-around space-x-8 animate-scroll w-[200%] hover:animate-pause">
-      <img src="/images/logo-bestbuy.webp" alt="Company 1" class="h-16 object-contain">
-      <img src="/images/logo-google.webp" alt="Company 2" class="h-16 object-contain">
-      <img src="/images/logo-ikea.webp" alt="Company 3" class="h-16 object-contain">
-      <img src="/images/logo-mcdonalds.webp" alt="Company 4" class="h-16 object-contain">
-      <img src="/images/logo-state-farm.webp" alt="Company 5" class="h-16 object-contain">
-      <img src="/images/logo-tesla.webp" alt="Company 6" class="h-16 object-contain">
-      <img src="/images/logo-bestbuy.webp" alt="Company 1" class="h-16 object-contain">
-      <img src="/images/logo-google.webp" alt="Company 2" class="h-16 object-contain">
-      <img src="/images/logo-ikea.webp" alt="Company 3" class="h-16 object-contain">
-      <img src="/images/logo-mcdonalds.webp" alt="Company 4" class="h-16 object-contain">
-      <img src="/images/logo-state-farm.webp" alt="Company 5" class="h-16 object-contain">
-      <img src="/images/logo-tesla.webp" alt="Company 6" class="h-16 object-contain">
-    </div>
-  </div>
-</section>
-
-<style>
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-
-  .animate-scroll {
-    animation: scroll 20s linear infinite;
-    animation-play-state: running; 
-  }
-
-  .hover\:animate-pause:hover {
-    animation-play-state: paused;
-  }
-</style>
-
-
-<section class="max-w-6xl mx-auto mt-16 px-4" id="FAQ">
-  <h2 class="text-6xl font-extrabold text-center text-gray-800 mb-10">Frequently Asked Questions</h2>
-
-  <div class="space-y-6 ">
-    <!-- FAQ Item 1 -->
-    <div class="border border-gray-300 rounded-lg overflow-hidden shadow-md">
-      <button
-        class="w-full flex justify-between items-center p-5 bg-gray-50 duration-300 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-400"
-        aria-expanded="false" id="question1">
-        <span class="text-lg font-semibold ">What is your return policy?</span>
-        <svg
-          class="w-6 h-6 transition-transform transform" id="icon1"
-          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd"
-                d="M5.23 7.21a.75.75 0 011.06-.02L10 10.67l3.71-3.48a.75.75 0 111.04 1.08l-4 3.75a.75.75 0 01-1.04 0l-4-3.75a.75.75 0 01-.02-1.06z"
-                clip-rule="evenodd" />
-        </svg>
-      </button>
-      <div id="answer1" class="p-5 hidden text-gray-600 transition-all duration-300 ease-in-out">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic iusto numquam animi ut neque eveniet voluptatem rerum, nostrum quo quisquam! Quasi ipsa expedita sequi dignissimos cupiditate maiores omnis eum ducimus?
-      </div>
-    </div>
-
-    <!-- FAQ Item 2 -->
-    <div class="border border-gray-300 rounded-lg overflow-hidden shadow-md">
-      <button
-        class="w-full flex justify-between items-center p-5 bg-gray-50 duration-300 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-400"
-        aria-expanded="false" id="question2">
-        <span class="text-lg font-semibold">How can I track my order?</span>
-        <svg
-          class="w-6 h-6 transition-transform transform" id="icon2"
-          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd"
-                d="M5.23 7.21a.75.75 0 011.06-.02L10 10.67l3.71-3.48a.75.75 0 111.04 1.08l-4 3.75a.75.75 0 01-1.04 0l-4-3.75a.75.75 0 01-.02-1.06z"
-                clip-rule="evenodd" />
-        </svg>
-      </button>
-      <div id="answer2" class="p-5 hidden text-gray-600 transition-all duration-300 ease-in-out">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, cumque inventore? Provident alias quam corporis, illum soluta dignissimos modi id commodi nemo porro possimus, sit doloribus sequi nihil eveniet nesciunt!
-      </div>
-    </div>
-
-    <!-- FAQ Item 3 -->
-    <div class="border border-gray-300 rounded-lg overflow-hidden shadow-md">
-      <button
-        class="w-full flex justify-between items-center p-5 bg-gray-50 duration-300 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-400"
-        aria-expanded="false" id="question3">
-        <span class="text-lg font-semibold">Do you offer international shipping?</span>
-        <svg
-          class="w-6 h-6 transition-transform transform" id="icon3"
-          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd"
-                d="M5.23 7.21a.75.75 0 011.06-.02L10 10.67l3.71-3.48a.75.75 0 111.04 1.08l-4 3.75a.75.75 0 01-1.04 0l-4-3.75a.75.75 0 01-.02-1.06z"
-                clip-rule="evenodd" />
-        </svg>
-      </button>
-      <div id="answer3" class="p-5 hidden text-gray-600 transition-all duration-300 ease-in-out">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus error eligendi consequatur. Impedit odit quaerat velit, aperiam omnis nulla rem similique accusantium expedita exercitationem optio perferendis voluptate alias obcaecati laudantium?
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="mt-20 px-4" id="Contact">
-  <div class="bg-green-50 font-[sans-serif] lg:h-screen">
-    <div
-        class="grid lg:grid-cols-3 items-center max-lg:justify-center gap-6 h-full sm:p-12 p-8 max-sm:p-4">
-        <div class="max-w-lg max-lg:mx-auto max-lg:text-center max-lg:mb-6">
-            <h2 class="text-4xl font-extrabold text-gray-800">Get In Touch</h2>
-            <p class="text-sm text-gray-600 mt-4 leading-relaxed">Have a specific inquiry or looking to explore new opportunities? Our
-                experienced team is ready to engage with you.</p>
-
-            <form class="mx-auto mt-8 bg-white rounded-lg p-6 shadow-md space-y-4">
-                <input type='text' placeholder='Name'
-                    class="w-full rounded-md h-12 px-6 bg-[#f0f1f2] text-sm outline-none" />
-                <input type='email' placeholder='Email'
-                    class="w-full rounded-md h-12 px-6 bg-[#f0f1f2] text-sm outline-none" />
-                <input type='text' placeholder='Subject'
-                    class="w-full rounded-md h-12 px-6 bg-[#f0f1f2] text-sm outline-none" />
-                <textarea placeholder='Message' rows="6"
-                    class="w-full rounded-md px-6 bg-[#f0f1f2] text-sm pt-3 outline-none"></textarea>
-                <button type='button'
-                    class="text-gray-800 bg-green-200 hover:bg-green-300 font-semibold rounded-md text-sm px-6 py-3 block w-full">Send
-                    Message</button>
-            </form>
+      <div class="pack_card standard">
+        <div class="banner">
+          <span class="banner_tag">Standard</span>
         </div>
-
-        <div class="z-10 relative lg:col-span-2">
-            <img src="https://readymadeui.com/images/analtsis.webp" class="w-3/4 object-contain block mx-auto" />
+        <div class="pack_name">Standard Plan</div>
+        <p class="description">For growing businesses</p>
+        <div class="lists">
+          <div class="list">Unlimited file storage</div>
+          <div class="list">10 GB bandwidth per month</div>
+          <div class="list">Email support</div>
+          <div class="list">10.000 tasks per month</div>
         </div>
-    </div>
-</div>
-</section>
-
-<footer class="bg-gray-900">
-  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-      <div class="md:flex md:justify-between">
-          <div class="mb-6 md:mb-0">
-              <a href="https://flowbite.com/" class="flex items-center">
-                  <img src="/images/png-clipart-cv-library-employment-website-curriculum-vitae-recruitment-job-others-miscellaneous-blue.png" class="h-8 me-3 rounded-full" alt="FlowBite Logo" />
-                  <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">CV.</span>
-              </a>
+        <div class="bottom">
+          <div class="price_container">
+            <span class="devise">$</span>
+            <span class="price">15</span>
+            <span class="date">/month</span>
           </div>
-          <div class="grid grid-cols-2 gap-8 sm:grid-cols-3">
-              <div>
-                  <h2 class="mb-6 text-sm font-semibold text-white uppercase">Resources</h2>
-                  <ul class="text-gray-600 font-medium">
-                      <li class="mb-4">
-                          <a href="https://google.com/" class="hover:underline">Google</a>
-                      </li>
-                      <li>
-                          <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
-                      </li>
-                  </ul>
-              </div>
-              <div>
-                  <h2 class="mb-6 text-sm font-semibold text-white uppercase">Follow us</h2>
-                  <ul class="text-gray-600 font-medium">
-                      <li class="mb-4">
-                          <a href="#" class="hover:underline">Github</a>
-                      </li>
-                      <li>
-                          <a href="#" class="hover:underline">Discord</a>
-                      </li>
-                  </ul>
-              </div>
-              <div>
-                  <h2 class="mb-6 text-sm font-semibold text-white uppercase">Legal</h2>
-                  <ul class="text-gray-600 font-medium">
-                      <li class="mb-4">
-                          <a href="#" class="hover:underline">Privacy Policy</a>
-                      </li>
-                      <li>
-                          <a href="#" class="hover:underline">Terms &amp; Conditions</a>
-                      </li>
-                  </ul>
-              </div>
-          </div>
+          <a class="btn" href="#">Choose Standard</a>
+        </div>
       </div>
-      <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
-      <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-gray-500 sm:text-center">
-              © 2024 <a href="/" class="hover:underline">Mujtaba Chandio™</a>. All Rights Reserved.
-          </span>
-          <div class="flex mt-4 sm:mt-0">
-              <a href="#" class="text-gray-500 hover:text-gray-900">
-                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
-                      <path d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"/>
-                  </svg>
-                  <span class="sr-only">Facebook page</span>
-              </a>
-              <a href="#" class="ms-5 text-gray-500 hover:text-gray-900">
-                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
-                      <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
-                  </svg>
-                  <span class="sr-only">Discord community</span>
-              </a>
+    
+      <div class="pack_card premium">
+        <div class="banner">
+          <span class="banner_tag">Premium</span>
+        </div>
+        <div class="pack_name">Premium Plan</div>
+        <p class="description">For large enterprises</p>
+        <div class="lists">
+          <div class="list">Unlimited file storage</div>
+          <div class="list">20 GB bandwidth per month</div>
+          <div class="list">Priority support</div>
+          <div class="list">Unlimited tasks per month</div>
+          <div class="list">Custom features</div>
+        </div>
+        <div class="bottom">
+          <div class="price_container">
+            <span class="devise">$</span>
+            <span class="price">25</span>
+            <span class="date">/month</span>
           </div>
+          <a class="btn" href="#">Choose Premium</a>
+        </div>
       </div>
-  </div>
-</footer>
-
-
+    </section>
+      <!-- contact section -->
+      <section id="Contact">
+        <div id="container">
+            <h1>&bull; Keep in Touch &bull;</h1>
+            <div class="underline"></div>
+            <div class="icon_wrapper">
+                <!-- New envelope icon -->
+                <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2,3 L22,3 C22.5523,3 23,3.4477 23,4 L23,20 C23,20.5523 22.5523,21 22,21 L2,21 C1.4477,21 1,20.5523 1,20 L1,4 C1,3.4477 1.4477,3 2,3 Z M2,4 L2,20 L22,20 L22,4 L2,4 Z M3,5 L21,5 L21,19 L3,19 L3,5 Z"/>
+                </svg>
+            </div>
+            <form action="#" method="post" id="contact_form">
+                <div class="name">
+                    <label for="name"></label>
+                    <input type="text" placeholder="My name is" name="name" id="name_input" required>
+                </div>
+                <div class="email">
+                    <label for="email"></label>
+                    <input type="email" placeholder="My e-mail is" name="email" id="email_input" required>
+                </div>
+                <div class="telephone">
+                    <label for="name"></label>
+                    <input type="text" placeholder="My number is" name="telephone" id="telephone_input" required>
+                </div>
+                <div class="message">
+                    <label for="message"></label>
+                    <textarea name="message" placeholder="I'd like to chat about" id="message_input" cols="30" rows="5" required></textarea>
+                </div>
+                <div class="submit">
+                    <input type="submit" value="Send Message" id="form_button" />
+                </div>
+            </form><!-- // End form -->
+        </div><!-- // End #container -->
+    </section>
+        <!-- footer  -->
+        <footer class="footer">
+          <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+          </div>
+          <ul class="social-icon">
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a></li>
+          </ul>
+          <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="/">Home</a></li>
+            <li class="menu__item"><a class="menu__link" href="#About">About</a></li>
+            <li class="menu__item"><a class="menu__link" href="#Services">Services</a></li>
+            <li class="menu__item"><a class="menu__link" href="#Pricing">Pricing</a></li>
+            <li class="menu__item"><a class="menu__link" href="#Contact">Contact</a></li>
+      
+          </ul>
+          <p>&copy;2024 Mujtaba | All Rights Reserved</p>
+        </footer>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    // JavaScript for Mobile Menu Toggle
+    document.querySelector('.mobile-menu').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
 </body>
-<script src="script.js"></script>
-
 </html>
