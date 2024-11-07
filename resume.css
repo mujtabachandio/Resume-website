@@ -1,168 +1,296 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
 
-*{
-    margin: 0%;
-    padding: 0%;
+* {
+    margin: 0;
+    padding: 0;
     font-weight: 500;
     font-size: 14px;
+    box-sizing: border-box;
 }
-body{
+
+body {
     display: grid;
     place-items: center;
     font-weight: 450;
     opacity: 1;
+    font-family: Arial, sans-serif;
 }
 
-.none
-{
+.none {
     display: none;
 }
-.resume
-{
+
+.resume {
     margin-top: 20px;
-    width: 85%;
+    width: 88%; /* Increased width slightly */
+    max-width: 1200px;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
-#print
-{
+
+#print {
     background-color: #fff;
     padding: 30px 50px;
-    height: 1120px;
-
+    height: 100%;
 }
 
-.head
-{
+.head {
     display: grid;
     grid-template-columns: 3fr 1.5fr;
+    gap: 10px;
 }
-.head .main .name
-{
+
+.head .main .name {
     font-size: 55px;
     font-family: 'Raleway', sans-serif;
 }
-.head .main  span:nth-child(2)
-{
+
+.head .main span:nth-child(2) {
     color: rgb(100, 100, 100);
     font-size: 55px;
     font-family: 'Raleway', sans-serif;
     margin-left: 5px;
 }
-.head .main .post
-{
-font-family: 'Barlow', sans-serif;
+
+.head .main .post {
+    font-family: 'Barlow', sans-serif;
 }
-.head .contacts
-{
+
+.head .contacts {
     text-align: right;
     padding-top: 7px;
 }
-.head .contacts .content
-{
+
+.head .contacts .content {
     font-weight: 500;
     padding-right: 5px;
 }
-.head .contacts .symbol
-{
+
+.head .contacts .symbol {
     margin-right: 5px;
     font-size: 15px;
     width: 17px;
     height: 17px;
 }
-.line
-{
+
+.line {
     height: 0.5px;
     background-color: rgb(87, 87, 87);
     margin: 25px 0;
     margin-bottom: 50px;
 }
-.mainbody
-{
+
+.mainbody {
     display: grid;
     grid-template-columns: 10fr 1fr 17fr;
-    height: 900px;
+    height: auto;
+    gap: 20px;
 }
-.mainbody .border
-{
+
+.mainbody .border {
     background-color: rgb(87, 87, 87);
     width: 3px;
-    opacity: 2;
+    opacity: 1;
 }
-.mainbody .rightside
-{
+
+.mainbody .rightside {
     padding-left: 15px;
 }
-.title
-{
+
+.title {
     font-weight: 700;
     font-size: 18px;
-    border: none;
     padding-bottom: 3px;
     border-bottom: 2px greenyellow solid;
 }
-.skill
-{
+
+.skill {
     margin-bottom: 6px;
 }
-button
-{
+
+button {
     margin: 15px 0;
 }
-.language
-{
-    margin-bottom:6px;
+
+.language {
+    margin-bottom: 6px;
 }
-.language span:nth-child(odd)
-{
+
+.language span:nth-child(odd) {
     font-weight: 700;
 }
-.edublock{
+
+.edublock {
     margin-bottom: 10px;
 }
-.edublock .head
-{
+
+.edublock .head {
     font-weight: 700;
     font-size: 17px;
 }
 
-.navbtn
-{
-position: fixed;
-top: 40%;
-left: 4%;
-transform: translate(-40%,-4%);
-height: 60px;
-width: 60px;
-border-radius: 50%;
-border:#fff 2px solid;
-transition: 300ms ease-in-out;
-box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+/* Navigation buttons */
+.navbtn {
+    position: fixed;
+    border-radius: 50%;
+    border: #fff 2px solid;
+    transition: all 0.3s ease;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
-.navbtn:nth-child(2)
-{
-top: 50%;
-left: 4.4%;
-transform: translate(-50%,-4.4%);
-}
-.navbtn:nth-child(3)
-{
-top: 60%;
-left: 4.8%;
-transform: translate(-60%,-4.8%);
-}
-.navbtn:hover
-{
+
+.navbtn:hover {
     background-color: black;
     color: #fff;
     border: #000 2px solid;
-    height: 65px;
-    width: 65px;
+    transform: scale(1.1);
 }
-.input-checkbox{
-    margin-right: 10px;
+
+/* Positioning for different buttons */
+.navbtn:nth-child(1) {
+    top: 40%;
+    left: 4%;
 }
-.education-head{
-    font-weight: 700;
-    font-size: 17px;
+
+.navbtn:nth-child(2) {
+    top: 50%;
+    left: 4.4%;
+}
+
+.navbtn:nth-child(3) {
+    top: 60%;
+    left: 4.8%;
+}
+
+/* Button Sizes for Different Screen Sizes */
+.navbtn {
+    height: 60px;
+    width: 60px;
+}
+
+@media (max-width: 1024px) {
+    .navbtn {
+        height: 55px;
+        width: 55px;
+        top: auto;
+        bottom: 10%;
+        left: 5%;
+        transform: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbtn {
+        height: 50px;
+        width: 50px;
+        bottom: 8%;
+        left: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbtn {
+        height: 45px;
+        width: 45px;
+        bottom: 5%;
+        left: 5%;
+    }
+
+    .navbtn:hover {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .head {
+        grid-template-columns: 2fr 1fr;
+    }
+    
+    .mainbody {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .resume {
+        width: 92%;
+    }
+
+    .head .main .name,
+    .head .main span:nth-child(2) {
+        font-size: 45px;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+    .navbtn {
+        top: auto;
+        bottom: 10%;
+        left: 5%;
+        transform: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .head {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .resume {
+        width: 95%;
+    }
+
+    .head .main .name,
+    .head .main span:nth-child(2) {
+        font-size: 36px;
+    }
+
+    .title {
+        font-size: 15px;
+    }
+
+    .head .contacts {
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .mainbody {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .resume {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .head .main .name,
+    .head .main span:nth-child(2) {
+        font-size: 28px;
+    }
+
+    .title {
+        font-size: 14px;
+    }
+
+    .line {
+        margin: 15px 0;
+    }
+
+    .navbtn {
+        height: 50px;
+        width: 50px;
+        bottom: 5%;
+        left: 5%;
+    }
+
+    .navbtn:hover {
+        height: 55px;
+        width: 55px;
+    }
 }
